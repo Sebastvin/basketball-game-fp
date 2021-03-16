@@ -30,6 +30,7 @@ public class Timer : MonoBehaviour
         {
             Time.timeScale = 0;
             Cursor.visible = true;
+            Manager.startGame = false;
 
             if (Goal.points > highscore)
             {
