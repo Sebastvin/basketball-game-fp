@@ -7,6 +7,8 @@ public class SoundEffect : MonoBehaviour
     public AudioClip[] sound;
     public AudioSource xd;
 
+
+
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collision)
     {

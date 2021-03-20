@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     public static bool startGame = false;
+
+    public AudioClip buttonClick;
+    public AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 0;
         Cursor.visible = true;
+    }
+
+    public void ButtonClick()
+    {
+        source.clip = buttonClick;
+        source.Play();
     }
 
     private void Update()
