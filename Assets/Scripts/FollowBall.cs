@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FollowBall : MonoBehaviour
 {
-
 	public GameObject firePoint;
 	public GameObject ballPrefab;
 

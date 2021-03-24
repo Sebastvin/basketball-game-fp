@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class changePosition : MonoBehaviour
 {
-
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("w") && transform.position.y <= 10)

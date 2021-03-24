@@ -13,6 +13,4 @@ public class Spawner : MonoBehaviour
     {
         Instantiate(ball, startPosition, Quaternion.identity);
     }
-
-
 }
