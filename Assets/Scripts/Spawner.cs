@@ -8,7 +8,6 @@ public class Spawner : MonoBehaviour
 
     public static Vector3 startPosition = new Vector3(0.8f, 4.8f, -33.2f);
 
-    // Update is called once per frame
     public void Spawn()
     {
         Instantiate(ball, startPosition, Quaternion.identity);

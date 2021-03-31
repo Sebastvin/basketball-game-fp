@@ -8,7 +8,6 @@ public class Goal : MonoBehaviour
     public ParticleSystem goal;
     public Text text;
 
-    //public AudioClip clip;
     public AudioSource source;
     public GameObject shake;
 
@@ -26,10 +25,8 @@ public class Goal : MonoBehaviour
         {
             points += 3;
             text.text = "Points: " + points.ToString();
-            //source.clip = clip;
             shake.transform.localPosition = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(9.5f, 10.5f), shake.transform.position.z);
             source.Play();
-
             goal.Play();
         }
 

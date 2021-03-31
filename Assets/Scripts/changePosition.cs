@@ -6,6 +6,8 @@ public class changePosition : MonoBehaviour
 {
     void Update()
     {
+        //Change position player on Y-axe 
+
         if (Input.GetKeyDown("w") && transform.position.y <= 10)
         {
             transform.position += new Vector3(0, 1, 0);

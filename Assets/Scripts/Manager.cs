@@ -10,7 +10,6 @@ public class Manager : MonoBehaviour
     public AudioClip buttonClick;
     public AudioSource source;
 
-    // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 0;
@@ -32,7 +31,6 @@ public class Manager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     public void StartGame()
     {
         Time.timeScale = 1;

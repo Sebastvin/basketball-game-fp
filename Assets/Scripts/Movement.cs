@@ -30,7 +30,6 @@ public class Movement : MonoBehaviour
         int forTwo = 0;
         Vector3 pos = points[0].transform.position;
 
-        int test = 0;
 
         for (int i = 0; i < spawns -1; i++)
         {          
@@ -44,7 +43,6 @@ public class Movement : MonoBehaviour
             if (points[randomNumber].tag == "3" && forThree <= 3)//for 3
             {
                 forPoints.text = "For: " + 3.ToString();
-                test += 3;
                 counter = 3;
                 forThree++;
                 pos = points[randomNumber].transform.position;
@@ -57,12 +55,9 @@ public class Movement : MonoBehaviour
                 }
             }
 
-
-
             if (points[randomNumber].tag == "2" && forTwo <= 4) //for 2
             {
                 forPoints.text = "For: " + 2.ToString();
-                test += 2;
                 counter = 2;
                 forTwo++;
                 pos = points[randomNumber].transform.position;
@@ -76,7 +71,6 @@ public class Movement : MonoBehaviour
             }
 
             currentNumber = randomNumber;
-
             transform.position = pos;
         }
     }

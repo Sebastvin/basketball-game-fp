@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     public GameObject end;
     int highscore;
     
-
     public void Start()
     {
         highscore = PlayerPrefs.GetInt("highscore");

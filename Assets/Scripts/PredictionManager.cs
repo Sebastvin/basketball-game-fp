@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PredictionManager : Singleton<PredictionManager>
 {
-    //public GameObject obstacles;
-    public int maxIterations;
+    public int longTail;
 
     Scene currentScene;
     Scene predictionScene;
@@ -55,10 +54,10 @@ public class PredictionManager : Singleton<PredictionManager>
             dummy.transform.position = currentPosition;
             dummy.GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
             lineRenderer.positionCount = 0;
-            lineRenderer.positionCount = maxIterations;
+            lineRenderer.positionCount = longTail;
 
 
-            for (int i = 0; i < maxIterations; i++)
+            for (int i = 0; i < longTail; i++)
             {
                 predictionPhysicsScene.Simulate(Time.fixedDeltaTime);
                 lineRenderer.SetPosition(i, dummy.transform.position);

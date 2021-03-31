@@ -32,7 +32,6 @@ public class Shooter : MonoBehaviour
         ball.GetComponent<Rigidbody>().AddForce(calculateForce(), ForceMode.Impulse);
     }
 
-
     void Update()
     {  
          float vertical = Input.GetAxis("Mouse Y");
@@ -42,6 +41,10 @@ public class Shooter : MonoBehaviour
 
         if (isOutside == false && Manager.startGame == true)
         {
+            
+             //currentRotation x,y defines coordinates in which space the "prediction tail" can move
+             //transform.Rotate() is responsible for the movement of the "prediction tail" 
+            
 
             if (currentRotation.x >= -0.45f && currentRotation.x <= 0.3f && currentRotation.y >= -0.4f && currentRotation.y <= 0.4f)
             {
@@ -68,9 +71,7 @@ public class Shooter : MonoBehaviour
                       Horizontal * rotationSpeed, //Horizontal * rotationSpeed
                       0.0f
                   );
-
             }
-
 
             if (currentRotation != transform.rotation && currentRotation.x >= -0.45f && currentRotation.x <= 0.3f && currentRotation.y >= -0.4f && currentRotation.y <= 0.4f)
             {
@@ -85,8 +86,6 @@ public class Shooter : MonoBehaviour
             currentRotation = transform.rotation;
             currentPosition = transform.position;
         }
-    
-
     }
 
     void predict()
